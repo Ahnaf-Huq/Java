@@ -37,7 +37,13 @@ class MyMath
 			return n*factorialRecursive(n-1);
 		}
 	}
-	
+	int fibonacci(int n){
+		if (n<=2){			//(n == 1 || n==2)
+			return 1;
+		} else{
+			return fibonacci(n-1) + fibonacci(n-2);
+		}
+	}
 	
 		
 }
@@ -52,7 +58,11 @@ class MathMain
 		System.out.println("Random method with double parameter: "+math1.random());	
 		System.out.println("Random method with integer parameter: "+math1.random(50));
 		System.out.println("Factorial of integer: "+math1.factorial(5));
-		System.out.println("Factorial of integer: "+math1.factorialRecursive(5));
+		System.out.println("Recursive Factorial: "+math1.factorialRecursive(4));
+		System.out.println("Fibonacci: "+math1.fibonacci(7));
+		System.out.println("Fibonacci: "+math1.fibonacci(2));
+		System.out.println("Fibonacci: "+math1.fibonacci(0));
+
 
 			
 
