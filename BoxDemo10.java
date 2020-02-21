@@ -2,25 +2,36 @@ class Box
 {
 	private String name;
 	private double width,height,depth;
-	Box()
+	private Box()
 	{
 		width =height=depth = -1;
 		
 	}
-	Box(String name,double width,double height,double depth)
+	public Box(String name,double width,double height,double depth)
 	{
 		this.width = width;
 		this.height = height;
 		this.depth = depth;
+		this.name = name; //this always refers to the current object not to current class
+	}
+	public Box(String name)
+	{
+		this();		//calling default constructor
 		this.name = name;
 	}
-	double volume()
+	public Box(int length){
+		this("Cube",length,length,length);		//calling constructor
+	}
+	public double volume()
 	{
+		this();
 		return width*height*depth;
 	}
-	void printVolume()
+	public void printVolume()
 	{
+		System.out.println(name);
 		System.out.println("Volume print by volume method: "+volume());
+		
 	}
 }
 public class BoxDemo10
@@ -32,12 +43,16 @@ public class BoxDemo10
 		Box box2;
 		box2 = new Box("Box2",5,6,7);
 		
-		System.out.println("Volume of the box: "+box1.volume());
-		System.out.println("Volume of the box: "+box2.volume());
+		box1.printVolume();
 		
-		Box box3 = new Box();
-		System.out.println("Volume of the box: "+box3.volume());
-
+		
+		//System.out.println("Volume of the box: "+box1.volume());
+		//System.out.println("Volume of the box: "+box2.volume());
+		
+		//Box box3 = new Box();
+		//System.out.println("Volume of the box: "+box3.volume());
+		Box box4 = new Box("Box 4");
+		box4.printVolume();
 		
 	}
 	
