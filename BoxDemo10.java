@@ -24,7 +24,6 @@ class Box
 	}
 	public double volume()
 	{
-		this();
 		return width*height*depth;
 	}
 	public void printVolume()

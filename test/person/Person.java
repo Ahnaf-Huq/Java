@@ -1,3 +1,4 @@
+package test.person;
 class Person {
     public Person() {
          name = "Not named";

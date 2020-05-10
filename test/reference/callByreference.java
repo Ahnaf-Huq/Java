@@ -1,3 +1,4 @@
+package test.reference;
 class Test{
 	int a,b;
 	Test(int i){
@@ -7,12 +8,11 @@ class Test{
 		Test temp = new Test(a+10);
 		return temp;
 	}
-	}
 }
 
+
 class ReturnObject {
-	public static void(String args[])
-	{
+	public static void main(String args[]) {
 		Test obj1 = new Test(2);
 		Test obj2;
 		obj2 = obj1.incrByten();

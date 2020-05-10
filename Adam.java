@@ -3,31 +3,35 @@ class Person {
 		System.out.println("This is a new man");
 	}
 	public Person(String givenName, int yearOfBirth) {
-		System.out.println("Name got:"+name);
-		System.out.println("Age got:"+yearOfBirth);
-		
-		
+		System.out.println("Name got:"+givenName);
+		System.out.println("Birth Year got:"+yearOfBirth);
+		name = givenName;
+		birthdayYear = yearOfBirth;
 	}
+	
 	public String getName() {
-		System.out.println("Name got:"+name);
+		//System.out.println("Name got:"+name);
+		return name;
 	}
-	public String changeName(String name) {
-		name = String name;
+	public void changeName(String name) {
+		this.name =name;
 	}
 	public int getAgeInYears(int currentYear) {
-
+		return currentYear-birthdayYear;
 	}
 	private String name;
 	private int birthdayYear;
-	public static void main(String[] args) {
-	……
-	}
+	
 }
 
 class Adam {
 	public static void main (String args[]){
 		Person p1 = new Person();
-		p1.
 		Person p2 = new Person("Nouman",1997);
+		System.out.println(p2.getName());
+		p2.changeName("Khan");
+		System.out.println(p2.getName());
+		System.out.println("Current Age: "+p2.getAgeInYears(2020));
 	}
+}
 	
