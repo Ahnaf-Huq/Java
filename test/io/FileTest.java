@@ -25,7 +25,8 @@ public class FileTest {
 	    while (line!=null) {
 	        System.out.println(line);
 	        line = br.readLine();
-	    }
+	   
+	   }
 	    fr.close();
 		
 		} catch (IOException e) {
